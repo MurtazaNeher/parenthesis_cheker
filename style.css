@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    text-align: center;
+    padding: 50px;
+    margin: 10px auto;
+}
+
+#input-box {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    padding: 20px;
+    width: 70vw;
+    height: 300px;
+    border: 2px solid black;
+}
+
+#check-btn {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#output-result {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    width: 70vw;
+    height: 150px;
+    padding: 20px;
+}
