@@ -9,9 +9,7 @@ const outputBox = document.querySelector("#output-result");
 
 
 function checkClickHandler() {
-    console.log("clicked");
     let inputStr = inputBox.value;
-
 
 }
 
