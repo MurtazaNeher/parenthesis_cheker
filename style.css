@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgba(65, 106, 230, 0.765);
+    background-color: black;
     color: var(--font-color);
 }
 
@@ -16,30 +16,32 @@ body {
     --quick-sand: 'Quicksand', sans-serif;
     --primary-color: royalblue;
     --bg-color: white;
-    --font-color: black;
+    --font-color: white;
 }
 
 #header {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     margin: auto;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-    margin-bottom: 50px;
-    background-color: white;
+    margin-bottom: 25px;
+    background-color: var(--primary-color);
 }
 
 #header-heading {
-    color: var(--primary-color);
+    color: black;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#header-des {
+#description {
     padding: 0px 90px 0px 90px;
     font-size: 20px;
+    text-align: center;
+    margin: 40px auto;
 }
 
 #input-box {
@@ -49,7 +51,7 @@ body {
     padding: 20px;
     width: 40vw;
     height: 20vh;
-    border: 2px solid black;
+    border: 2px solid gray;
     border-radius: 6px;
     font-size: 19px;
 }
@@ -59,21 +61,20 @@ body {
     display: block;
     margin: 30px auto;
     padding: 5px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     width: 40vw;
     border: 1px solid gray;
     font-size: 19px;
-    box-shadow: -4px -4px black;
 }
 
 #check-btn:hover {
-    transition: 1s;
-    color: white;
-    background-color: black;
-    box-shadow: 5px 5px white;
+    transition: 0.5s;
+    color: black;
+    background-color: royalblue;
+    border-radius: 50px;
 }
 
 #output-result {
@@ -86,10 +87,11 @@ body {
     height: auto;
     padding: 20px;
     border-radius: 6px;
+    font-size: 19px;
 }
 
 #footer {
-    background-color: black;
+    background-color: var(--primary-color);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -101,7 +103,7 @@ body {
 }
 
 #footer a {
-    color: var(--primary-color);
+    color: black;
     font-family: var(--baloo-bhai);
 }
 
