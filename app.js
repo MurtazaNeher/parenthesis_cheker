@@ -12,12 +12,24 @@ let outputShown = false;
 outputBox.style.display = "none";
 
 function checkClickHandler() {
+
     let inputStr = inputBox.value;
     topPointer = -1;
     stack = [];
     arr = inputStr;
+    console.log(!inputStr);
 
-    checkParenthesis();
+    if (!inputStr) {
+        outputBox.style.display = "block";
+        outputBox.style.color = "white";
+        outputBox.style.border = "2px solid gray";
+        outputBox.style.backgroundColor = "transparent";
+        outputBox.innerHTML = "Please enter something!!!";
+    } else {
+        checkParenthesis();
+
+    }
+
 }
 
 function checkParenthesis() {
@@ -42,7 +54,7 @@ function checkParenthesis() {
 
             } else {
 
-                showOutput(false, `An error has been caught!!!  Closing parenthesis : " ${arr[i]} " appears at position : ${i+1} , before an opening parenthesis.`);
+                showOutput(false, `An error has been caught !!!  Closing parenthesis : " ${arr[i]} " appears at position : ${i+1} , before an opening parenthesis.`);
             }
         }
         errorIndex = i + 1;
@@ -52,13 +64,13 @@ function checkParenthesis() {
         if (topPointer == -1) {
             showOutput(true);
         } else if (topPointer > -1) {
-            showOutput(false, `An error has been caught!!! Closing parenthesis are missing. At position " ${errorIndex} " , " ${stack[topPointer]} " doesn't has closing parenthesis !!!`)
+            showOutput(false, `An error has been caught !!! Closing parenthesis are missing. At position " ${errorIndex} " , " ${stack[topPointer]} " doesn't has closing parenthesis !!!`)
         }
     }
 }
 
 
-function showOutput(bool, mssg = "No errors found . You have given a perfect input :) ") {
+function showOutput(bool, mssg = "No errors found . You have used brackets perfectly :) ") {
     outputShown = true;
 
     if (bool) {
