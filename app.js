@@ -26,17 +26,16 @@ function checkParenthesis() {
 
     for (let i = 0; i < arr.length; i++) {
 
-        if (arr[i] == "{" || arr[i] == "[" || arr[i] == "(" || arr[i] == "<") {
+        if (arr[i] == "{" || arr[i] == "[" || arr[i] == "(") {
             stack.push(arr[i]);
             currentPushed = arr[i];
             topPointer++;
-        } else if (arr[i] == "}" || arr[i] == "]" || arr[i] == ")" || arr[i] == ">") {
+        } else if (arr[i] == "}" || arr[i] == "]" || arr[i] == ")") {
 
             if (
                 (arr[i] == "}" && stack[topPointer] == "{") ||
                 (arr[i] == "]" && stack[topPointer] == "[") ||
-                (arr[i] == ")" && stack[topPointer] == "(") ||
-                (arr[i] == ">" && stack[topPointer] == "<")) {
+                (arr[i] == ")" && stack[topPointer] == "(")) {
 
                 stack.pop();
                 topPointer--;
