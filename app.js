@@ -17,7 +17,6 @@ function checkClickHandler() {
     topPointer = -1;
     stack = [];
     arr = inputStr;
-    console.log(!inputStr);
 
     if (!inputStr) {
         outputBox.style.display = "block";
