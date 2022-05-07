@@ -5,7 +5,6 @@ const outputBox = document.querySelector("#output-result");
 let arr = [];
 let topPointer = 0;
 let stack = [];
-let currentPushed;
 let errorIndex;
 let outputShown = false;
 
@@ -39,7 +38,7 @@ function checkParenthesis() {
 
         if (arr[i] == "{" || arr[i] == "[" || arr[i] == "(") {
             stack.push(arr[i]);
-            currentPushed = arr[i];
+
             topPointer++;
         } else if (arr[i] == "}" || arr[i] == "]" || arr[i] == ")") {
 
